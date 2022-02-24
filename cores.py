@@ -4,10 +4,9 @@
 # Biblioteca com todas cores em dicionários
 # feita por eu viktor podem usar e ser feliz
 # para usar com eficácia siga o modelo de print a seguir:
-# print("{}{}{} SEU TEXTO {}".format(cores['cor_da_letra'], bg['cor_do_fundo'],
-# fx['efeito_do_texto'], limpar))
-# O limpar no final é necessário para remover os efeitos no final da linha, para que
-# ele não siga para o resto do texto
+# print(f"{cores['COR QUE DESEJA USAR']} TEXTO QUE DESEJA INSERIR {limpar}")
+# O limpar no final é necessário caso você queira remover os efeitos no final da linha,
+# para que ele não siga para o resto do texto
 
 limpar = '\33[m'
 
