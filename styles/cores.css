@@ -32,7 +32,7 @@ section{
     background-position-x: left;
     transition-duration: 0.3s;
 }
-.sectionheader a:hover{ 
+.sectionheader a:hover{
     background-position-x: right;
 }
 .sectioncontent{
