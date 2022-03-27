@@ -1,33 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+section{
 
-:root{
-    --gradient: linear-gradient(to right,#45abaf, #30b7ec, #3b4fff);
 }
-*{
-    padding: 0; margin: 0;
-}
-body{
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-header{
-    height: 10vh;
-    background-color: rgb(14, 24, 24);
+.sectionheader{
     display: flex;
     justify-content: space-between;
+    padding: 2rem;
+    gap: 3rem;
     align-items: center;
-    padding: 10px;
 }
-footer{
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(14, 24, 24);
-    color: white;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    padding: 16px;
+.python{
+    width: 60px;
+}
+.title{
+    margin-right: auto;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.sectionheader a{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-image: var(--gradient);
+    background-size: 300%;
+    background-position-x: left;
+    transition-duration: 0.3s;
+}
+.sectionheader a:hover{
+    background-position-x: right;
 }
