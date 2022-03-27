@@ -1,50 +1,51 @@
-# Esta biblioteca serve para você não precisar ficar se preocupando com as cores
-# e com digitar \33['blabla'm
+# CORES.PY
 
-# Biblioteca com todas cores em dicionários
-# feita por eu viktor podem usar e ser feliz
-# para usar com eficácia siga o modelo de print a seguir:
-# print(f"{cores['COR QUE DESEJA USAR']} TEXTO QUE DESEJA INSERIR {limpar}")
-# O limpar no final é necessário caso você queira remover os efeitos no final da linha,
-# para que ele não siga para o resto do texto
+# Library with all the colors in python dictionaries
+# made by me to make some things easier when writing terminal-printed code
+# to use it effectively i recommend you to interpolate like this:
+# print(f"{cores['YOUR COLOR']} YOUR TEXT {clear}")
+# the clear at the end is necessary if you want the text colors/fx/bg to stop,
+# so it doesn't extend to the rest of the code
 
-limpar = '\33[m'
+clear = '\33[m'
 
 cores = {
-    'preto': '\33[30m',
-    'vermelho': '\33[31m',
-    'verde': '\33[32m',
-    'amarelo': '\33[33m',
-    'azul': '\33[34m',
-    'roxo': '\33[35m',
-    'ciano': '\33[36m',
-    'cinza': '\33[37m',
+    'black': '\33[30m',
+    'red': '\33[31m',
+    'green': '\33[32m',
+    'yellow': '\33[33m',
+    'blue': '\33[34m',
+    'purple': '\33[35m',
+    'cyan': '\33[36m',
+    'grey': '\33[37m',
+    'white': '\33[97m',
 
-    'cinza_escuro': '\33[90m',
-    'vermelho_claro': '\33[91m',
-    'verde_claro': '\33[92m',
-    'amarelo_claro': '\33[93m',
-    'azul_claro': '\33[94m',
-    'roxo_claro': '\33[95m',
-    'ciano_claro': '\33[96m',
-    'branco': '\33[97m'
+# b at the start of the color name stands for brigther
+
+    'darkgrey': '\33[90m',
+    'bred': '\33[91m',
+    'bgreen': '\33[92m',
+    'byellow': '\33[93m',
+    'bblue': '\33[94m',
+    'bpurple': '\33[95m',
+    'bcyan': '\33[96m',
 }
 
 bg = {
-    'branco': '\33[107m',
-    'preto': '\33[40m',
-    'vermelho': '\33[101m',
-    'verde': '\33[102m',
-    'amarelo': '\33[103m',
-    'azul': '\33[104m',
-    'roxo': '\33[105m',
-    'ciano': '\33[106m',
+    'white': '\33[107m',
+    'black': '\33[40m',
+    'red': '\33[101m',
+    'green': '\33[102m',
+    'yellow': '\33[103m',
+    'blue': '\33[104m',
+    'purple': '\33[105m',
+    'cyan': '\33[106m',
 }
 
 fx = {
     'normal': '\33[10m',
-    'contorno': '\33[52m',
-    'negrito': '\33[1m',
-    'italico': '\33[3m',
-    'sublinhado': '\33[4m',
+    'out': '\33[52m',
+    'bold': '\33[1m',
+    'italic': '\33[3m',
+    'under': '\33[4m',
 }

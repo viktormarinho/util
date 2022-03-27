@@ -26,11 +26,190 @@
     <section>
         <div class="sectionheader">
             <img class="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">
-            <p class="title">Cores.py</p>
+            <p class="title">cores.py</p>
             <a href="/utils/cores.py"><img src="/img/downloadicon.png" alt=""></a>
         </div>
+        <p class="subtitle">A library made to facilitate using colors in the console with python</p>
         <div class="sectioncontent">
-            
+            <p>This library its a <strong>simple</strong> and light-weight archive that you can include
+                in your python project easily. Just leave the file anywhere you want
+                in the project and then use <code>import</code> with the relative
+                file path, and you're good to go! - Recommendation: utilize
+                <code>from cores import *</code>. It will make your life a lot easier
+                when you are using the library.
+            </p>
+            <p>In essence, the usage of cores.py is by doing string 
+                interpolation to put color in the text, using a more
+                comprehensible and descriptive way than the normal 
+                '<code>\033[96m</code>' cryptic code. In cores.py, you
+                can simply put <code>cores['cyan']</code>
+                in your string and it will have the same effect.
+            </p>
+            <p>There is a way that i, personally, find the best to use the
+                interpolations, and that is following the <strong>fstring</strong> model: <br>
+                <code>f"{cores['bgreen']}Hello mom!{clear}"</code> <br>
+                Okay, let me explain some things here. At first glance, you may think
+                that <code>bgreen</code> is a typo, but no, it actually refers
+                to <strong>brighter</strong> colors. So, when you want to use
+                a brighter blue, per example, you would use <code>bblue</code>.
+                Secondly, there is another variable being used, the <code>clear</code>
+                variable. The clear variable is a special one, it is used to remove
+                all the colors, backgrounds and effects that the text have at the point
+                that it is used. Why would you do this? Simple. Because of the way that
+                the colors work in the terminal, once you use any style on console text,
+                it will <strong>automatically extend</strong> to the end of the text, or 
+                until it gets overwritten by another style. So, to solve this problem
+                we use the <code>clear</code> variable.
+            </p>
+            <p class="warning">One thing that i need to warn you is, that different terminals
+                have different colors. The Windows prompt won't display the exact same
+                colors as the VS Code terminal, and it won't display the exact same colors
+                as the PyCharm terminal. Every terminal has its own set of colors,
+                they interpret these values as different colors. Some might be identical,
+                some might be a little bit off.
+            </p>
+            <p>I <strong>strongly recommend</strong> that you open the file in order to understand
+                how the text effects work, and it is fairly simple. The cores.py module haves a lot
+                of comments in it, explaining everything you need to know. The basic syntax consists
+                of: <code>cores['COLORNAME']</code> to use colors, <code>bg['COLORNAME']</code> to use
+                backgrounds and <code>fx['FXNAME']</code> to use effects like <strong>bold</strong> or 
+                <em>italic</em>. You can use one color, one bg and one fx on the same text at a time.
+            </p>
+            <p>Here is a table with all the possible colors, backgrounds and effects cores.py supports:</p>
+            <div class="tabela">
+                <table>
+                    <th>Color</th>
+                    <th>cores</th>
+                    <th>bg</th>
+                    <th>fx</th>
+                    <tr>
+                        <td style="color:black">Black</td>
+                        <td>black</td>
+                        <td>black</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:red">Red</td>
+                        <td>red</td>
+                        <td>red</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:green">Green</td>
+                        <td>green</td>
+                        <td>green</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:rgb(255, 217, 5); background-color: rgb(44, 44, 44);">Yellow</td>
+                        <td>yellow</td>
+                        <td>yellow</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:blue">Blue</td>
+                        <td>blue</td>
+                        <td>blue</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:purple">Purple</td>
+                        <td>purple</td>
+                        <td>purple</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:cyan; background-color: rgb(44, 44, 44);">Cyan</td>
+                        <td>cyan</td>
+                        <td>cyan</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:white; background-color: rgb(44, 44, 44);">White</td>
+                        <td>white</td>
+                        <td>white</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:gray">Gray</td>
+                        <td>gray</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:rgb(63, 63, 63)">Dark Gray</td>
+                        <td>darkgray</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:rgb(255, 88, 88); background-color: rgb(44, 44, 44);">Bright Red</td>
+                        <td>bred</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:rgb(45, 248, 18); background-color: rgb(44, 44, 44);">Bright Green</td>
+                        <td>bgreen</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:rgb(255, 238, 6); background-color: rgb(44, 44, 44);">Bright Yellow</td>
+                        <td>byellow</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:rgb(51, 71, 255); background-color: rgb(44, 44, 44);">Bright Blue</td>
+                        <td>bblue</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:rgb(224, 0, 253); background-color: rgb(44, 44, 44);">Bright Purple</td>
+                        <td>bpurple</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td style="color:rgb(0, 255, 242); background-color: rgb(44, 44, 44);">Bright Cyan</td>
+                        <td>bcyan</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Normal</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>normal</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">Bold</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>bold</td>
+                    </tr>
+                    <tr>
+                        <td style="font-style: italic;">Italic</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>italic</td>
+                    </tr>
+                    <tr>
+                        <td style="text-decoration: underline;">Underline</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>under</td>
+                    </tr>
+                    <tr>
+                        <td style="outline: solid 1px red;">Outlined</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>out</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </section>
     <footer>
