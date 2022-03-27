@@ -20,6 +20,17 @@ header{
     align-items: center;
     padding: 10px;
 }
+footer{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(14, 24, 24);
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 16px;
+}
 .headerlogo{
     padding: 2px;
     display: flex;
@@ -44,6 +55,7 @@ header{
     font-size: 4vh;
 }
 .lang-dropdown{
+    flex-shrink: 0;
     padding: 4px;
     cursor: pointer;
     margin-right: 1vw;
@@ -129,15 +141,4 @@ header{
 }
 .card a:hover{
     background-position-x: right;
-}
-footer{
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(14, 24, 24);
-    color: white;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    padding: 16px;
 }
